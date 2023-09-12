@@ -39,23 +39,16 @@ const Login = () =>{
                 </div>
               </div>
             
-              <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-              </div>
            
             </div>
-          </form>
+         
     
           <div class="social-auth-links text-center mb-3">
             <p>- OR -</p>
-            <button type="submit" class="btn btn-block btn-primary">
-              <i class="fab fa-facebook mr-2"></i> Ingresar
-            </button>
-            <Link to={"#"} class="btn btn-block btn-danger">
-              <i class="fab fa-google-plus mr-2"></i> Crear cuenta
-            </Link>
+            <button type="submit" class="btn btn-block btn-primary"> Ingresar </button>
+            <Link to={"CrearCuenta"} type="submit" class="btn btn-block btn-danger">Crear cuenta</Link>
           </div>
-         
+          </form>
     
         </div>
     
