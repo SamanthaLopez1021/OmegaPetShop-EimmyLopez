@@ -1,0 +1,35 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nombre": "Samantha",
+      "email": "Samlop@gmail.com",
+      "password": "123456"
+    },
+    {
+      "email": "eimslopez@soy.sena.edu.co",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "email": "javale82lopez@gmail.com",
+      "password": "12345678",
+      "id": 3
+    },
+    {
+      "email": "Samlop@gmail.com",
+      "password": "123456",
+      "id": 4
+    }
+  ],
+  "Cliente": [
+    {
+      "id": 1,
+      "nombreCliente": "Maria Gomez",
+      "documento": 10212152,
+      "direccion": "calle 25#14-43",
+      "telefono": 123456
+     
+    }
+  ]
+}
