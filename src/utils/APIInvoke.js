@@ -1,25 +1,24 @@
 import config from '../Config'
 
-class APIInvoke { 
-    async invokeGET(resource, queryParams){
+class APIInvoke {
+    async invokeGET(resource, queryParams) {
 
         queryParams = queryParams || []
-        const queryString = queryParams.reduce((last, q, i)=> last + `${i=== 0 ? '?' : '&'}${q}`,'')
+        const queryString = queryParams.reduce((last, q, i) => last + `${i === 0 ? '?' : "&"}${q}`, '')
 
         const token = localStorage.getItem("token");
         let bearer;
-        if (token === ''){
-            bearer="";
-        }else{
+        if (token === "") {
+            bearer = "";
+        } else {
             bearer = `${token}`;
-
         }
 
-        const data ={
+        const data = {
             method: 'GET',
-            headers:{
-                'Content-Type':'application/json',
-                'x-auth-token':bearer
+            headers: {
+                'Content-Type': 'application/json',
+                'x-auth-token': bearer
             }
         }
         const url = `${config.api.baseURL}${resource}${queryString}`
@@ -27,25 +26,22 @@ class APIInvoke {
         return response
     }
 
-    async invokePUT(resource, body){
+    async invokePUT(resource, body) {
 
-        
-      
         const token = localStorage.getItem("token");
         let bearer;
-        if (token === ""){
-            bearer="";
-        }else{
+        if (token === "") {
+            bearer = "";
+        } else {
             bearer = `${token}`;
-
         }
 
-        const data ={
+        const data = {
             method: 'PUT',
             body: JSON.stringify(body),
-            headers:{
-                'Content-Type':'application/json',
-                'x-auth-token':bearer
+            headers: {
+                'Content-Type': 'application/json',
+                'x-auth-token': bearer
             }
         }
         const url = `${config.api.baseURL}${resource}`
@@ -53,24 +49,22 @@ class APIInvoke {
         return response
     }
 
-    async invokePOST(resource, body){
-
+    async invokePOST(resource, body) {
 
         const token = localStorage.getItem("token");
         let bearer;
-        if (token === ""){
-            bearer="";
-        }else{
+        if (token === "") {
+            bearer = "";
+        } else {
             bearer = `${token}`;
-
         }
 
-        const data ={
+        const data = {
             method: 'POST',
             body: JSON.stringify(body),
-            headers:{
-                'Content-Type':'application/json',
-                'x-auth-token':bearer
+            headers: {
+                'Content-Type': 'application/json',
+                'x-auth-token': bearer
             }
         }
         const url = `${config.api.baseURL}${resource}`
@@ -78,23 +72,21 @@ class APIInvoke {
         return response
     }
 
-    async invokeDELETE(resource){
-
+    async invokeDELETE(resource) {
 
         const token = localStorage.getItem("token");
         let bearer;
-        if (token === ''){
-            bearer="";
-        }else{
+        if (token === "") {
+            bearer = "";
+        } else {
             bearer = `${token}`;
-
         }
 
-        const data ={
+        const data = {
             method: 'DELETE',
-            headers:{
-                'Content-Type':'application/json',
-                'x-auth-token':bearer
+            headers: {
+                'Content-Type': 'application/json',
+                'x-auth-token': bearer
             }
         }
         const url = `${config.api.baseURL}${resource}`
@@ -103,4 +95,4 @@ class APIInvoke {
     }
 }
 
-export default  new APIInvoke()
+export default new APIInvoke()

@@ -99,7 +99,7 @@ const onSubmit= (e)=>{
 }
 
     return (
-    <div className="hold-transition login-page">
+    <div style={{backgroundColor:"#D3C1DE"}} className="hold-transition login-page">
     <div className="login-box">
       <div className="login-logo">
         <Link to={"#"}><b>Iniciar</b>Sesion</Link>
@@ -147,7 +147,7 @@ const onSubmit= (e)=>{
          
     
           <div className="social-auth-links text-center mb-3">
-            <p>- OR -</p>
+           
             <button type="submit" className="btn btn-block btn-primary"> Ingresar </button>
             <Link to={"/crearCuenta"} className="btn btn-block btn-danger">Crear cuenta</Link>
           </div>

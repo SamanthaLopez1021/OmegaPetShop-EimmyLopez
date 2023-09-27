@@ -133,7 +133,7 @@ const crearCuenta = async () => {
     }
 
     return (
-        <div className="hold-transition login-page">
+        <div style={{backgroundColor:"#D3C1DE"}} className="hold-transition login-page">
         <div className="login-box">
           <div className="login-logo">
             <Link to={"#"}><b>Crear</b>Cuenta</Link>

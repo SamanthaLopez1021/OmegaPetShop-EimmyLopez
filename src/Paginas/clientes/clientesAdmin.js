@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ContentHeader from "../../componentes/ContentHeader";
 import Footer from "../../componentes/Footer";
 import Navbar from "../../componentes/Navbar";
 import SidebarContainer from "../../componentes/SidebarContainer";
+import APIInvoke from "../../utils/APIInvoke";
 
 const ClientesAdmin = () => {
+  const [clientes, setClientes] = useState([]);
+
+  const cargarClientes = async () => {
+    const response = await APIInvoke.invokeGET("/cliente");
+    
+    setClientes(response.cliente);
+
+  }
+
+  useEffect(() => {
+    cargarClientes();
+  }, []);
+
   return (
     <div className="wrapper">
       <Navbar></Navbar>
@@ -21,7 +35,7 @@ const ClientesAdmin = () => {
         <section className="content">
           <div className="card">
             <div className="card-header">
-              <h3 className="card-title">Title</h3>
+              <h3 className="card-title">Clientes</h3>
               <div className="card-tools">
                 <button
                   type="button"
@@ -45,23 +59,15 @@ const ClientesAdmin = () => {
               <table className="table table-bordered">
                 <thead>
                   <tr>
-                    <th style={{ width: '10%'}}>Id</th>
-                    <th style={{ width: '10%'}}>Nombre Cliente</th>
-                    <th style={{ width: '10%'}}>Documento</th>
-                    <th style={{ width: '10%'}}>Direccion</th>
-                    <th style={{ width: '10%'}}>Telefono</th>
-                    <th style={{ width: '50%' }}>Opciones</th>
+                    <th style={{ width: "10%" }}>Id</th>
+                    <th style={{ width: "10%" }}>Nombre Cliente</th>
+                    <th style={{ width: "10%" }}>Documento</th>
+                    <th style={{ width: "10%" }}>Direccion</th>
+                    <th style={{ width: "10%" }}>Telefono</th>
+                    <th style={{ width: "50%" }}>Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp; </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                 
                   
                 </tbody>
               </table>

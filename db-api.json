@@ -20,16 +20,25 @@
       "email": "Samlop@gmail.com",
       "password": "123456",
       "id": 4
+    },
+    {
+      "email": "eimmy@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "email": "eimslopez@soy.sena.edu.co",
+      "password": "Eslr30040600",
+      "id": 6
     }
   ],
-  "Cliente": [
+  "cliente": [
     {
       "id": 1,
       "nombreCliente": "Maria Gomez",
       "documento": 10212152,
       "direccion": "calle 25#14-43",
       "telefono": 123456
-     
     }
   ]
 }
